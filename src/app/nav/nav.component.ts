@@ -7,12 +7,18 @@ import {ShopService} from '../shop.service';
 })
 export class NavComponent implements OnInit {
   constructor(private shopService:ShopService) { }
-  tiltes:string[];
+  titles:string[];
+  selectedTitle:string;
   getTitlesProduct():void{
-      this.shopService.getTitles().subscribe(titles=>this.tiltes=titles);
+      this.shopService.getTitles().subscribe(titles=>this.titles=titles);
   }
   ngOnInit() {
      this.getTitlesProduct();
+  }
+  onSelectTitle(title:string):void{
+    this.selectedTitle=title;
+    console.log(title);
+
   }
 
 }
