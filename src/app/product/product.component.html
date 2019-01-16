@@ -1,10 +1,14 @@
 <div class="show-product" *ngIf="title">
-  <label class="title">{{title}}</label>
-  <div class="show-info-product" *ngIf="products.lenght">
-    <div class="info-product" *ngFor="let product of products">
-      <img src="{{product.img}}"/>
-      <span class="name">{{product.name}}</span>
-      Giá<span class="price">{{product.price}}</span> VNĐ
+  <div class="show-title">
+    <label class="title">{{title.name | uppercase}}</label>
+  </div>
+  <div class="intent">
+    <div class="show-info-product" *ngFor="let product of products">
+      <div *ngIf='title.id === product.title'>
+        <img src="{{product.img}}" alt={{product.name}} />
+        <span class="name">{{product.name}}</span>
+        <span class="price">Giá: {{product.price}} VNĐ</span>
+      </div>
     </div>
   </div>
 </div>

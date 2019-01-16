@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProductComponent } from './product/product.component';
+import { NavComponent } from './nav/nav.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'home' , component: NavComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+}

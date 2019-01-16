@@ -1,9 +1,10 @@
 <div class="na">
-  <img class="logo" src="../../assets/logo.png"/>
+    <img class="logo" src="../../assets/logo.png"/>
   <ul class="na_content">
+    
     <li *ngFor="let title of titles" (click)="onSelectTitle(title)">
-      <a>
-        {{title}}
+      <a class="title" >
+        {{title.name}}
       </a>
     </li>
   </ul>
