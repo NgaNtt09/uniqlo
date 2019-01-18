@@ -4,7 +4,8 @@ import { ProductComponent } from './product/product.component';
 import { NavComponent } from './nav/nav.component';
 
 const routes: Routes = [
-  {path: 'home' , component: NavComponent}
+  {path: 'home' , component: NavComponent},
+  {path: ':id' , component:ProductComponent}
 ];
 
 @NgModule({
@@ -12,4 +13,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { 
+
 }
