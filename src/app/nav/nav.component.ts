@@ -21,6 +21,7 @@ export class NavComponent implements OnInit {
   titles: Title[];
   title: Title;
   selectedTitle: Title;
+  toggle=true;
 
   getTitlesProduct(): void {
     this.shopService.getTitles().subscribe(titles => this.titles = titles);
@@ -30,7 +31,11 @@ export class NavComponent implements OnInit {
     
   }
   goBack(){
-    this.location.back
+    this.location.back();
+  }
+  toggleMenu(){
+    this.toggle=!this.toggle;
+    console.log(this.toggle);
   }
   
 }

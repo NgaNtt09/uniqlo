@@ -7,6 +7,7 @@ $background-color:#333;
     margin: 0;
     float: left;
     background-color: $background-color;
+    overflow: hidden;
     &_content{
         display: flex;
         list-style-type: none;
@@ -38,6 +39,7 @@ $background-color:#333;
     }
     .icon{
         display: none;
+        cursor: pointer;
         background-image: url(../../assets/icon/hambuger.png);
         content:'';
         width: 50px;
@@ -48,35 +50,34 @@ $background-color:#333;
     
 }
 @mixin responsive {
-    .na_content{
-        flex-wrap: wrap;
-        a:not(:first-child){
-            display: none;
-        }
+    .na_content:not(img){
+        display: none;   
     }
     .na{
         .icon{
             float: right;
             display: block;
         }
-        .responsive{
-            position: relative;
-            .icon{
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-            a{
-                text-align: left;
-            }
-            .logo{
-                position: absolute;
-                left:0;
-                top: 0;
-            }
+    }
+    .responsive{
+        display: flex;
+        .icon{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .na-content{
+            flex-wrap: wrap;
+            text-align: left;
+        }
+        .logo{
+            position: absolute;
+            left:0;
+            top: 0;
         }
     }
 }
+
 @media screen and (max-width:1039px){
     @include responsive();
     
