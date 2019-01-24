@@ -1,12 +1,12 @@
 <div class="na">
-    <img class="logo" src="../../assets/logo.png"/>
   <ul class="na_content">
-    
-    <li *ngFor="let title of titles" (click)="onSelectTitle(title)">
-      <a class="title" >
+    <li>  <img class="logo" src="../../assets/logo.png" routerLink="/home"/></li>
+    <li *ngFor="let title of titles">
+      <a routerLink="/{{title.name}}">
         {{title.name}}
       </a>
     </li>
   </ul>
+  <div class="icon" (click)="load()"></div>
 </div>
-<app-product [title]="selectedTitle"></app-product>
+<!-- <app-slide-show></app-slide-show> -->

@@ -1,3 +1,21 @@
-<p>
-  info-product works!
-</p>
+<div class="detail-product" *ngIf="product">
+  <div class="zoom">
+      <img src={{product.img}} alt={{product.name}} 
+      (mousemove)="zoom($event)"/>
+  </div> 
+  <div class="info">
+    <h1>{{product.name}}</h1>
+    <h2>Giá {{product.price}} VNĐ</h2>
+    <span>Số lượng: </span>
+    <div class="quantity-box">
+      <input type="number" value="1" class="input-text" 
+      step="1" min="1" max="" name="quantity" size="4"/>
+    </div>
+    <app-button btnType="buy">Đặt mua hàng</app-button>
+    <div class="show-button">
+        <app-button btnType="facebook">Nhắn tin facebook</app-button>
+        <app-button btnType="gift">Chương trình khuyến mại</app-button>
+      </div> 
+  </div>
+</div>
+<app-tab></app-tab>

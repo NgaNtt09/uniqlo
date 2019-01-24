@@ -1,5 +1,6 @@
 $max-height: 370px;
 .show-product{
+    width: 100%;
     float: left;
     margin: 0;
     overflow: auto;
@@ -16,6 +17,7 @@ $max-height: 370px;
         }
     }
     .intent{
+        // display: flex;
         position: relative;
         left: 60px;
         .show-info-product{
@@ -23,6 +25,7 @@ $max-height: 370px;
             margin: 3em 1em;
             box-shadow: 0 4px 8px 0 rgba(216, 176, 176, 0.2);
             transition: 0.3s;
+            // width: 100%;
             width: 20%;
             height: $max-height;
             &:hover{
@@ -45,4 +48,29 @@ $max-height: 370px;
         }
     }
 
+}
+@mixin responsive {
+    .na{
+        display: block;
+        z-index:2;
+        position: relative;
+    }
+    .show-product{
+        display: block;
+        z-index:1;
+        position: relative;
+    }
+    .show-title{
+        margin-top: 350px !important;
+    }
+    .intent{
+        display: flex;
+        .show-info-product{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width:1039px){
+    @include responsive();
+    
 }

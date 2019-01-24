@@ -1,0 +1,7 @@
+<div class="slide">
+  <app-button btnType="slide" position="left" (click)="plusDivs(-1)">&#10094;</app-button>
+  <app-button btnType="slide" position="right" (click)="plusDivs(1)">&#10095;</app-button>
+  <div class="images" *ngFor="let slide of slides">
+      <img class="slide-image" src={{slide.img}} *ngIf="slide.id===slideIndex"/> 
+  </div>
+</div>

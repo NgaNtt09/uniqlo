@@ -7,12 +7,8 @@ $background-color:#333;
     margin: 0;
     float: left;
     background-color: $background-color;
-    .logo{
-        margin: 0 25px ;
-        height: $max-height;
-        float: left;
-    }
     &_content{
+        display: flex;
         list-style-type: none;
         overflow: hidden;
         margin: 0;
@@ -21,9 +17,10 @@ $background-color:#333;
     li{
         float: left;
         text-align: center;
-        width: 14%;
+        width: 100%;
         cursor: pointer;
         a{
+            text-decoration: none;
             display: block;
             padding: 15.2px;
             color: #fff;
@@ -32,23 +29,55 @@ $background-color:#333;
                 background-color: #000;
             }
         }
-
+        .logo{
+            margin: 0 auto;
+            height: $max-height;
+            cursor: pointer;
+            display: block;
+        }
+    }
+    .icon{
+        display: none;
+        background-image: url(../../assets/icon/hambuger.png);
+        content:'';
+        width: 50px;
+        height: 50px;
+        background-color: $background-color;
+        background-repeat: no-repeat;
     }
     
 }
 @mixin responsive {
     .na_content{
-        li{
-            float: none;
-            margin: 0;
+        flex-wrap: wrap;
+        a:not(:first-child){
+            display: none;
         }
-        .logo{
-            float:none;
-            margin: 0;
+    }
+    .na{
+        .icon{
+            float: right;
+            display: block;
+        }
+        .responsive{
+            position: relative;
+            .icon{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            a{
+                text-align: left;
+            }
+            .logo{
+                position: absolute;
+                left:0;
+                top: 0;
+            }
         }
     }
 }
-@media screen and (max-width:930px){
+@media screen and (max-width:1039px){
     @include responsive();
     
 }

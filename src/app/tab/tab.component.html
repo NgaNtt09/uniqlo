@@ -1,0 +1,12 @@
+<div class="tab">
+  <div class="header">
+    <app-button btnType="link" *ngFor="let title of titles" 
+      [class.selected]="title === selectedTab"
+      (click)="onSelect(title)">
+      {{title.name}}
+    </app-button>
+  </div>
+  <div class="content">
+    <app-recommend></app-recommend>
+  </div>
+</div>
