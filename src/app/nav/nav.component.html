@@ -1,6 +1,6 @@
 <div class="na">
-  <div class="icon" responsive="true" (click)="toggleMenu()"></div>
-  <ul class="na_content"  *ngIf="toggle === true">
+  <div class="icon" (click)="toggleMenu()"></div>
+  <ul class="na_content">
     <li>  <img class="logo" src="../../assets/logo.png" routerLink="/home"/></li>
     <li *ngFor="let title of titles">
       <a routerLink="/{{title.name}}">
@@ -9,4 +9,5 @@
     </li>
   </ul>
 </div>
+<app-side-nav [toggle]="toggle"></app-side-nav>
 <!-- <app-slide-show></app-slide-show> -->

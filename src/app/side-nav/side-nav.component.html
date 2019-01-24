@@ -1,0 +1,9 @@
+<div class="side-nav" *ngIf="toggle === true">
+    <ul class="content">
+      <li *ngFor="let title of titles">
+        <a routerLink="/{{title.name}}">
+          {{title.name}}
+        </a>
+      </li>
+    </ul>
+  </div>

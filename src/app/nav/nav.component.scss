@@ -47,8 +47,11 @@ $background-color:#333;
         background-color: $background-color;
         background-repeat: no-repeat;
     }
-    
 }
+app-side-nav{
+    display: none;
+}
+
 @mixin responsive {
     .na_content:not(img){
         display: none;   
@@ -58,23 +61,9 @@ $background-color:#333;
             float: right;
             display: block;
         }
-    }
-    .responsive{
-        display: flex;
-        .icon{
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-        .na-content{
-            flex-wrap: wrap;
-            text-align: left;
-        }
-        .logo{
-            position: absolute;
-            left:0;
-            top: 0;
-        }
+    } 
+    app-side-nav{
+        display: block;
     }
 }
 

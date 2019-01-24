@@ -11,6 +11,7 @@ import { SlideShowComponent } from './slide-show/slide-show.component';
 import { TabComponent } from './tab/tab.component';
 import { RecommendComponent } from './recommend/recommend.component';
 import { PopupChatComponent } from './popup-chat/popup-chat.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PopupChatComponent } from './popup-chat/popup-chat.component';
     TabComponent,
     RecommendComponent,
     PopupChatComponent,
+    SideNavComponent,
   ],
   imports: [
     BrowserModule,
