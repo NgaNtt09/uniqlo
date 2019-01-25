@@ -12,6 +12,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
     "[class.a-btn--buy]": "btnType==='buy'",
     "[class.a-btn--slide]": "btnType==='slide'",
     "[class.a-btn--link]": "btnType==='link'",
+    "[class.a-btn--medium]": "size==='medium'",
     "[class.a-btn--popup-chat]": "btnType==='popup-chat'",
     "[class.a-btn--slide--left]": "position==='left'",
     "[class.a-btn--slide--right]": "position==='right'",
@@ -20,6 +21,7 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() btnType;
   @Input() position;
+  @Input() size;
   constructor() { }
 
   ngOnInit() {
