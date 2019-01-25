@@ -50,9 +50,9 @@ $max-height: 370px;
 
 }
 @mixin responsive {
-    .na{
+    app-nav{
         display: block;
-        z-index:2;
+        z-index:100;
         position: relative;
     }
     .show-product{
@@ -60,9 +60,9 @@ $max-height: 370px;
         z-index:1;
         position: relative;
     }
-    .show-title{
-        margin-top: 350px !important;
-    }
+    // .show-title{
+    //     margin-top: 350px !important;
+    // }
     .intent{
         display: flex;
         .show-info-product{
