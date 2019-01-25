@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-popup-chat',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./popup-chat.component.scss']
 })
 export class PopupChatComponent implements OnInit {
+  open:boolean = false;
 
   constructor() { }
-
+  
   ngOnInit() {
   }
+  controlForm(){
+    this.open=!this.open;
+    console.log(this.open);
+  }  
 
 }

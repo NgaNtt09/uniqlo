@@ -1,8 +1,8 @@
-<app-button btnType="popup-chat" onclick="openForm()">Hỗ trợ trực tuyến</app-button>
-<div class="chat-popup">
+<app-button btnType="popup-chat" (click)="controlForm()">Hỗ trợ trực tuyến</app-button>
+<div class="chat-popup" *ngIf="open === true">
   <form class="form-container">
     <div class="header">Hỗ trợ trực tuyến
-      <div class="icon" (click)="closeForm()"></div>
+      <div class="icon" (click)="controlForm()"></div>
     </div>
     <div class="content-mes"></div>
     <div class="send">
