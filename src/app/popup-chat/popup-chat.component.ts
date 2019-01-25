@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./popup-chat.component.scss']
 })
 export class PopupChatComponent implements OnInit {
-  open:boolean = false;
+  open:boolean = true;
+  @Input() mess:string;
 
   constructor() { }
   

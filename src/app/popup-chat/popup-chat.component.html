@@ -1,13 +1,18 @@
 <app-button btnType="popup-chat" (click)="controlForm()">Hỗ trợ trực tuyến</app-button>
 <div class="chat-popup" *ngIf="open === true">
   <form class="form-container">
-    <div class="header">Hỗ trợ trực tuyến
-      <div class="icon" (click)="controlForm()"></div>
+    <div class="header" (click)="controlForm()">Hỗ trợ trực tuyến
+        <div class="icon" (click)="controlForm()"></div>
     </div>
-    <div class="content-mes"></div>
+    <div class="content-mes">
+      <app-message-box>  
+          Chào bạn, để được hỗ trợ tốt nhất vui lòng nhập nội dung vào ô bên dưới.
+      </app-message-box>
+      <app-message-box btnType="rep" *ngIf="show === true">{{messanger.value}}</app-message-box>
+    </div>
     <div class="send">
-      <input placeholder="Type message.." name="msg" required/>
-      <app-button  size="medium" type="submit" class="btn">Send</app-button>
+      <input #messanger type="text" placeholder="Type message.." [(ngModel)]="mess" name="msg" required/>
+      <app-button  size="medium" type="submit">Send</app-button>
     </div>
   </form>
 </div>
