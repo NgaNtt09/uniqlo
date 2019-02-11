@@ -1,0 +1,15 @@
+.header{
+    font-weight: bold;
+    font-size: 12pt;
+    display: block;
+    text-align: left;
+    margin: 10px;
+}
+.container{
+    font-size: 12pt;
+    display: block;
+    text-align: left;
+    &--img{
+        background-image: url()
+    }
+}
