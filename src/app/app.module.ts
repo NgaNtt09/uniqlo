@@ -14,6 +14,7 @@ import { RecommendComponent } from './recommend/recommend.component';
 import { PopupChatComponent } from './popup-chat/popup-chat.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { MessageBoxComponent } from './message-box/message-box.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MessageBoxComponent } from './message-box/message-box.component';
     PopupChatComponent,
     SideNavComponent,
     MessageBoxComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
