@@ -93,7 +93,8 @@
         position: fixed;
         bottom: 0;
         right: 0;
-        margin-right: 10px;
+        margin-right: 8px;
+        z-index: 9;
     }
     &--medium{
         border-radius:0px;
