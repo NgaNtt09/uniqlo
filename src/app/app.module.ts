@@ -16,6 +16,12 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { MessageBoxComponent } from './message-box/message-box.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { environment } from 'src/environments/environment';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +41,8 @@ import { FooterComponent } from './footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.fisebase),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
