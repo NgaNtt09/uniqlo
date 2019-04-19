@@ -1,62 +1,62 @@
-$color-grey: #DDD;
+$color-grey: #ddd;
 $color-green: rgb(53, 168, 53);
-.container{
-    clear: both;
+.container {
+  clear: both;
+  position: relative;
+  .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
     position: relative;
-    .arrow{
-        width: 12px;
-        height: 20px;
-        overflow: hidden;
-        position: relative;
-        float: left;
-        top: 6px;
-        right: -1px;
-        .inner{
-            width: 0;
-            height: 0;
-            border-right: 20px solid $color-grey;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            position: absolute;
-            top: 0;
-            left: 2px;
-        }
+    float: left;
+    top: 6px;
+    right: -1px;
+    .inner {
+      width: 0;
+      height: 0;
+      border-right: 20px solid $color-grey;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      position: absolute;
+      top: 0;
+      left: 2px;
     }
-    .message-body{
-        font-size: 13px;
-        float: left;
-        width: 200px;
-        height: auto;
-        background-color: $color-grey;
-        padding: 6px 8px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -o-border-radius: 5px;
-        border-radius: 5px;
-        margin-bottom: 10px;
+  }
+  .message-body {
+    font-size: 13px;
+    float: left;
+    width: 200px;
+    height: auto;
+    background-color: $color-grey;
+    padding: 6px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  &--rep {
+    display: block;
+    .arrow {
+      position: relative;
+      float: right;
+      top: 8px;
+      right: 5px;
+      .inner {
+        width: 0;
+        height: 0;
+        border-left: 10px solid $color-green;
+        border-top: 10px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        top: 0;
+        left: 2px;
+      }
     }
-    &--rep{
-        display: block;
-        .arrow{
-            position: relative;
-            float: right;
-            top: 8px;
-            right: 5px;
-            .inner{
-                width: 0;
-                height: 0;
-                border-left: 10px solid $color-green;
-                border-top: 10px solid transparent;
-                border-bottom: 5px solid transparent;
-                position: absolute;
-                top: 0;
-                left: 2px;
-            }
-        }
-        .message-body{
-            float: right;
-            margin-bottom: 10px;
-            background-color: $color-green;
-        }
+    .message-body {
+      float: right;
+      margin-bottom: 10px;
+      background-color: $color-green;
     }
+  }
 }
