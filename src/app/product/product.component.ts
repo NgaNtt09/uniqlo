@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
   }
 
   getTitleProduct(): void {
-    var id = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
     this.shopService.getTitle(id).subscribe(title => this.title = title);
   }

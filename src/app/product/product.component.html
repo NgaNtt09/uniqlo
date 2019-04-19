@@ -1,15 +1,18 @@
 <app-nav></app-nav>
 <div class="show-product">
-  <div class="show-title"  *ngIf="title">
-    <label class="title">{{title.name | uppercase}}</label>
+  <div class="show-title" *ngIf="title">
+    <label class="title">{{ title.name | uppercase }}</label>
   </div>
   <div class="intent">
-    <div  *ngFor="let product of products">
-      <div *ngIf='title.id === product.title' class="show-info-product" 
-      routerLink="/detail/{{product.id}}">
-        <img src="{{product.img}}" alt={{product.name}} />
-        <span class="name">{{product.name}}</span>
-        <span class="price">Giá: {{product.price}} VNĐ</span>
+    <div *ngFor="let product of products">
+      <div
+        *ngIf="title.id === product.title"
+        class="show-info-product"
+        routerLink="/detail/{{ product.id }}"
+      >
+        <img src="{{ product.img }}" alt="{{ product.name }}" />
+        <span class="name">{{ product.name }}</span>
+        <span class="price">Giá: {{ product.price }} VNĐ</span>
       </div>
     </div>
   </div>
