@@ -1,82 +1,81 @@
 $max-height: 50px;
-$background-color:#333;
-.na{
-    height: $max-height;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    float: left;
-    background-color: $background-color;
+$background-color: #333;
+.na {
+  height: $max-height;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  float: left;
+  background-color: $background-color;
+  overflow: hidden;
+  &_content {
+    display: flex;
+    list-style-type: none;
     overflow: hidden;
-    &_content{
-        display: flex;
-        list-style-type: none;
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    float: left;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: #000;
     }
-    li{
-        float: left;
-        text-align: center;
-        width: 100%;
-        cursor: pointer;
-        &:hover{
-            background-color: #000;
-        }
-        a{
-            text-decoration: none;
-            display: block;
-            padding: 15px;
-            color: #fff;
-            // background-color: $background-color;
-        }
-        .logo{
-            margin: 0 auto;
-            height: $max-height;
-            cursor: pointer;
-            display: block;
-        }
-        .cart{
-            height: 40px;
-            cursor: pointer;
-            display: block;
-            margin: 5px auto;
-        }
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 15px;
+      color: #fff;
+      // background-color: $background-color;
     }
-    .icon{
-        display: none;
-        cursor: pointer;
-        background-image: url(../../assets/icon/hambuger.png);
-        content:'';
-        width: 50px;
-        height: 50px;
-        background-color: $background-color;
-        background-repeat: no-repeat;
+    .logo {
+      margin: 0 auto;
+      height: $max-height;
+      cursor: pointer;
+      display: block;
     }
-}
-app-side-nav{
+    .cart {
+      height: 40px;
+      cursor: pointer;
+      display: block;
+      margin: 5px auto;
+    }
+  }
+  .icon {
     display: none;
+    cursor: pointer;
+    background-image: url(../../assets/icon/hambuger.png);
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: $background-color;
+    background-repeat: no-repeat;
+  }
+}
+app-side-nav {
+  display: none;
 }
 
 @mixin responsive {
-    .na_content:not(img){
-        display: none;  
-        .logo{
-          display: block;
-        } 
+  .na_content:not(img) {
+    display: none;
+    .logo {
+      display: block;
     }
-    .na{
-        .icon{
-            float: right;
-            display: block;
-        }
-    } 
-    app-side-nav{
-        display: block;
+  }
+  .na {
+    .icon {
+      float: right;
+      display: block;
     }
+  }
+  app-side-nav {
+    display: block;
+  }
 }
 
-@media screen and (max-width:1039px){
-    @include responsive();
-    
+@media screen and (max-width: 1039px) {
+  @include responsive();
 }

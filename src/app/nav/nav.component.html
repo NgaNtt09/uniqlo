@@ -1,13 +1,13 @@
 <div class="na">
   <div class="icon" (click)="toggleMenu()"></div>
   <ul class="na_content">
-    <li>  <img class="logo" src="../../assets/logo.png" routerLink="/home"/></li>
+    <li><img class="logo" src="../../assets/logo.png" routerLink="/home" /></li>
     <li *ngFor="let title of titles">
-      <a routerLink="/{{title.name}}">
-        {{title.name}}
+      <a routerLink="/{{ title.name }}">
+        {{ title.name }}
       </a>
     </li>
-    <li> <img class="cart" src="../../assets/icon/cart.svg"/></li>
+    <li><img class="cart" src="../../assets/icon/cart.svg" /></li>
   </ul>
 </div>
 <app-side-nav [toggle]="toggle"></app-side-nav>
