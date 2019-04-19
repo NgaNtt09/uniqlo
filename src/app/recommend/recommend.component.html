@@ -1,15 +1,15 @@
 <div class="recommend">
   <div class="title">
-      <span>Sản phẩm cùng loại</span>
+    <span>Sản phẩm cùng loại</span>
   </div>
   <div class="products" *ngFor="let product of products">
     <div class="product">
-        <img src={{product.img}}/>
-        <div class="content">
-            <span class="name">{{product.name | uppercase}}</span>
-            <span class="sale">{{product.price*(1-0.5)}} VNĐ</span> 
-            Giá gốc <span class="price">{{product.price}} VNĐ</span>
-        </div>
+      <img src="{{ product.img }}" />
+      <div class="content">
+        <span class="name">{{ product.name | uppercase }}</span>
+        <span class="sale">{{ product.price * (1 - 0.5) }} VNĐ</span>
+        Giá gốc <span class="price">{{ product.price }} VNĐ</span>
+      </div>
     </div>
   </div>
 </div>
