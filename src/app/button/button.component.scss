@@ -1,118 +1,115 @@
-
-.a-btn{
-    cursor: pointer;
-    display: inline-flex;
-    width: 300px;
-    height: 50px;
-    align-items : center;
-    justify-content: center;
-    color :white;
-    font-size : 1.2vw;
-    border: none;
-    background-color: #4563a5;
-    border-radius: 4px;
-    &--facebook{
-        justify-content: flex-start;
-        margin-right: 50px;
-        &::before{
-            content:"";
-            background-image: url(../../assets/icon/facebook.png);
-            width: 50px;
-            height: 50px;
-            background-repeat: no-repeat;
-            border-radius: 8px 0 0 8px; 
-            margin-right: 50px;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        }
-        &:hover{
-            background-color: #3b5998;
-        }
-
+.a-btn {
+  cursor: pointer;
+  display: inline-flex;
+  width: 300px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2vw;
+  border: none;
+  background-color: #4563a5;
+  border-radius: 4px;
+  &--facebook {
+    justify-content: flex-start;
+    margin-right: 50px;
+    &::before {
+      content: "";
+      background-image: url(../../assets/icon/facebook.png);
+      width: 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      border-radius: 8px 0 0 8px;
+      margin-right: 50px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-    &--gift{
-        justify-content: flex-start;
-        &::before{
-            content:"";
-            background-image: url(../../assets/icon/gift.png) ;
-            width: 50px;
-            height: 50px;
-            margin-right: 50px ;
-            background-repeat: no-repeat;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        }
-        &:hover{
-            background-color: #3b5998;
-        }
+    &:hover {
+      background-color: #3b5998;
     }
-    &--buy{
-        background-color: red;
-        color: white;
-        margin:  30px 0; 
-        width: 150px;
-        &:hover{
-            background-color: rgb(156, 50, 50);
-        }
+  }
+  &--gift {
+    justify-content: flex-start;
+    &::before {
+      content: "";
+      background-image: url(../../assets/icon/gift.png);
+      width: 50px;
+      height: 50px;
+      margin-right: 50px;
+      background-repeat: no-repeat;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
-    &--slide{
-        background-color: #CCC;
-        width: 50px;
-        border-radius: 0px;
-        margin: 10px;
-        &--left{
-            position: absolute;
-            left: .5%;
-            top: 40%;
-            &:hover{
-                background-color: #BBB;
-            }
-        }
-        &--right{
-            position: absolute;
-            top: 40%;
-            left: 94%;
-            &:hover{
-                background-color: #BBB;
-            }
-        }
+    &:hover {
+      background-color: #3b5998;
     }
-    &--link{
-      margin-right: 5px;
-      background-color: #EEE;
-      color: #000;
-      border-radius: 8px 8px 0 0;
-      width: 200px;
-      &:hover{
-          color: #EEE;
-          background-color: #000;
+  }
+  &--buy {
+    background-color: red;
+    color: white;
+    margin: 30px 0;
+    width: 150px;
+    &:hover {
+      background-color: rgb(156, 50, 50);
+    }
+  }
+  &--slide {
+    background-color: #ccc;
+    width: 50px;
+    border-radius: 0px;
+    margin: 10px;
+    &--left {
+      position: absolute;
+      left: 0.5%;
+      top: 40%;
+      &:hover {
+        background-color: #bbb;
       }
-
     }
-    &--popup-chat{
-        background-color: green;
-        border-radius: 8px 8px 0 0;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        margin-right: 8px;
-        z-index: 9;
+    &--right {
+      position: absolute;
+      top: 40%;
+      left: 94%;
+      &:hover {
+        background-color: #bbb;
+      }
     }
-    &--medium{
-        border-radius:0px;
-        margin: 10px;
-        display: inline-flex;
-        background-color: white;
-        color:#AAA;
-        width: 30px;
-        height: 30px;
-        position: relative;
-        margin: 0 auto;
-        left: 0;
-        &:hover{
-            background-color: #EEE;
-            color: black;
-        }
+  }
+  &--link {
+    margin-right: 5px;
+    background-color: #eee;
+    color: #000;
+    border-radius: 8px 8px 0 0;
+    width: 200px;
+    &:hover {
+      color: #eee;
+      background-color: #000;
     }
+  }
+  &--popup-chat {
+    background-color: green;
+    border-radius: 8px 8px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 8px;
+    z-index: 9;
+  }
+  &--medium {
+    border-radius: 0px;
+    margin: 10px;
+    display: inline-flex;
+    background-color: white;
+    color: #aaa;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    &:hover {
+      background-color: #eee;
+      color: black;
+    }
+  }
 }
-.selected{
-    border-bottom: 3px solid #000; 
+.selected {
+  border-bottom: 3px solid #000;
 }
