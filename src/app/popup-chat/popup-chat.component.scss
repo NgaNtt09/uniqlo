@@ -1,63 +1,63 @@
-.chat-popup{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin-right: 8px;
+.chat-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 8px;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px 8px 0 0;
+  z-index: 9;
+  background-color: white;
+  .header {
+    margin: 0 0 10px 0;
+    background-color: green;
+    border: 1px solid green;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    color: white;
+    .icon {
+      float: right;
+      background-image: url(../../assets/icon/close.png);
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-color: green;
+      position: relative;
+      top: -5px;
+      left: 10px;
+      cursor: pointer;
+    }
+  }
+  .send {
+    display: inline-flex;
+    align-items: center;
+    app-button {
+      border: 1px solid #f1f1f1;
+      padding: 10px;
+      border-right: none;
+      font-size: 12px;
+      color: #888;
+    }
+  }
+  input {
+    width: 218px;
+    padding: 15px;
     border: 1px solid #f1f1f1;
-    border-radius: 8px 8px 0 0 ;
-    z-index: 9;
-    background-color: white;
-    .header{
-        margin: 0 0 10px 0;
-        background-color: green;
-        border: 1px solid green;
-        padding: 20px;
-        border-radius: 8px 8px 0 0 ;
-        color: white;
-        .icon{
-            float: right;
-            background-image: url(../../assets/icon/close.png);
-            content:"";
-            width: 30px;
-            height: 30px;
-            background-repeat: no-repeat;
-            background-color: green;  
-            position: relative;
-            top: -5px;
-            left: 10px;  
-            cursor: pointer;
-        }
+    border-right: none;
+    border-left: none;
+    resize: none;
+    min-height: 20px;
+    font-size: 12px;
+    &:focus {
+      background-color: #f1f1f1;
+      outline: none;
     }
-    .send{
-        display: inline-flex;
-        align-items: center;
-        app-button{
-            border: 1px solid #f1f1f1;
-            padding: 10px;
-            border-right: none; 
-            font-size: 12px;
-            color: #888;
-        }
-    }
-    input{
-        width: 218px;
-        padding: 15px;
-        border: 1px solid #f1f1f1;
-        border-right: none;
-        border-left: none;
-        resize: none;
-        min-height: 20px;
-        font-size: 12px;
-        &:focus{
-           background-color: #f1f1f1;
-           outline: none;
-        }
-    }
-    .content-mes{
-        min-height: 200px;
-        overflow: auto;
-    }
+  }
+  .content-mes {
+    min-height: 200px;
+    overflow: auto;
+  }
 }
